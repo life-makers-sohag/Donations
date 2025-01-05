@@ -1,0 +1,287 @@
+/* أسلوب التنسيق الأساسي */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #ffffff;
+  color: #024675;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #024675;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-logo {
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.main-header h1 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-section {
+  background-color: #f7af43;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-section h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #024675;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #024675;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #013a52;
+}
+
+.result-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.result-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.main-footer {
+  background-color: #024675;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    font-size: 14px;
+    padding: 0px 5px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  label, input, select {
+    font-size: 15px;
+  }
+}
+
+button {
+  width: 100%;
+  font-size: 16px;
+}
+
+label, input, select {
+  font-size: 16px;
+}
+
+#result {
+  padding: 20px;
+  text-align: center;
+}
+
+.donations-card {
+  background-color: #ffffff;
+  border: 2px solid #f7af43;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  padding: 25px;
+  max-width: 700px;
+  color: #024675;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.donations-header {
+  background-color: #024675;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+
+.donations-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.donations-content {
+  padding: 20px 15px;
+}
+
+.donations-content p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.donations-content strong {
+  color: #f7af43;
+}
+
+/* تصميم التنفيذ */
+.execution {
+  background-color: #f7af43;
+  color: #ffffff;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.execution-header {
+  background-color: #024675;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+
+.execution-header h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.execution-details {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.execution-details strong {
+  color: #ffffff;
+}
+
+.intention {
+  color: #f7af43;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.executions .execution {
+  background-color: #f7af43;
+  color: #ffffff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.execution p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.execution .intention {
+  color: #024675;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff3333;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .donations-card {
+    padding: 20px;
+  }
+
+  .donations-content p {
+    font-size: 16px;
+  }
+
+  .execution p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .donations-card {
+    padding: 15px;
+  }
+
+  .donations-content p {
+    font-size: 14px;
+  }
+
+  .execution p {
+    font-size: 12px;
+  }
+}

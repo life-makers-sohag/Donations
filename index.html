@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صناع الحياة سوهاج</title>
+  <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1>صناع الحياة سوهاج</h1>
+    <img src="hader-logo.png" alt="Logo" class="header-logo">
+  </header>
+
+  <main class="main-content">
+    <section class="form-section">
+      <h2>أدخل بياناتك لعرض التبرعات</h2>
+      <form>
+        <div class="form-group">
+          <label for="centerSelect">اختر المركز:</label>
+          <select id="centerSelect">
+            <option value="">-- اختر المركز --</option>
+            <option value="طما">طما</option>
+            <option value="طهطا">طهطا</option>
+            <option value="ساقلته">ساقلته</option>
+            <option value="المراغه">المراغه</option>
+            <option value="سوهاج">سوهاج</option>
+            <option value="المنشاة">المنشاة</option>
+            <option value="جرجا">جرجا</option>
+            <option value="البلينا">البلينا</option>
+            <option value="دار السلام">دار السلام</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="codeInput">أدخل الكود:</label>
+          <input type="text" id="codeInput" placeholder="اكتب الكود هنا">
+        </div>
+        <button type="button" onclick="fetchData()">عرض البيانات</button>
+      </form>
+    </section>
+
+    <section id="result" class="result-section"></section>
+  </main>
+
+  <footer class="main-footer">
+    <p>© 2025 صناع الحياة سوهاج. جميع الحقوق محفوظة.</p>
+    <p>Developed by: Mahmoud Hamed</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
