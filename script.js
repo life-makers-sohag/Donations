@@ -26,24 +26,29 @@ async function fetchData() {
     if (data.success) {
       const donations = data.data.slice(0); 
 
-      // Intentions data
+      // Intentions and prices
       const intentions = [
-        "اسقف", "الحفه", "بطاطين", "كسوه", "السلة الغذائية", "كرتونه غذائيه",
-        "اطعام", "وصلات مياه", "عام إغاثة غزة", "نخيل", "صحي", "غسيل كلوي",
-        "حضانات", "كفاله ايتام", "اعانه ماليه", "سداد ديون", "مشاريع"
+        { name: "وجبة طعام", price: 200 },
+        { name: "كرتونة رمضان", price: 600 },
+        { name: "وصلات مياة", price: 18000 },
+        { name: "العرائس", price: 700 },
+        { name: "زرع النخيل", price: 50 },
+        { name: "الايتام", price: 150 },
       ];
 
       // Generate execution details
       const executions = intentions.map((intention, index) => {
         const executionValue = donations[index + 7]; // Values from H2 to Z2
         if (executionValue) {
+          const executionCount = Math.floor(executionValue / intention.price); // Calculate execution count
           return `
            <div class="execution">
             <div class="execution-header">
-              <h4>${executionValue} (${intention}) </h4>
+              <h4>اجمالي ${intention.name} (${executionValue}) عدد التنفيذ = ${executionCount}</h4>
             </div>
-                        </div>
+            <p><strong>السعر:</strong> ${intention.price} جنيه</p>
 
+           </div>
           `;
         }
         return '';
@@ -63,7 +68,6 @@ async function fetchData() {
             <p><strong>السيستم:</strong> ${donations[5]}</p>
             <p><strong>المتبقي:</strong> ${donations[6]}</p>
             <p><strong>عدد التنفيذ :</strong></p>
-
           </div>
           <div class="executions">
             ${executions}
