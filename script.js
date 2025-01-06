@@ -40,7 +40,7 @@ async function fetchData() {
           return `
            <div class="execution">
             <div class="execution-header">
-              <h4>التنفيذ ${index + 1} : ${executionValue} (${intention}) </h4>
+              <h4>${executionValue} (${intention}) </h4>
             </div>
                         </div>
 
