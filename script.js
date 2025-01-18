@@ -24,16 +24,31 @@ async function fetchData() {
     const data = await response.json();
 
     if (data.success) {
-      const donations = data.data.slice(0); 
+      const donations = data.data.slice(0);
 
       // Intentions and prices
       const intentions = [
-        { name: "وجبة طعام", price: 200 },
-        { name: "كرتونة رمضان", price: 600 },
-        { name: "وصلات مياة", price: 18000 },
-        { name: "العرائس", price: 700 },
-        { name: "زرع النخيل", price: 50 },
-        { name: "الايتام", price: 150 },
+        { name: "غزه عام", price: 250 },
+        { name: "كرتونه غذائيه غزه", price: 300 },
+        { name: "السلة الغذائية", price: 150 },
+        { name: "كرتونه غذائيه", price: 350 },
+        { name: "اطعام", price: 200 },
+        { name: "زكاه فطر", price: 150 },
+        { name: "وصلات مياه", price: 18000 },
+        { name: "نخيل", price: 50 },
+        { name: "كفاله ايتام", price: 300 },
+        { name: "اعانه ماليه", price: 500 },
+        { name: "سداد ديون", price: 1000 },
+        { name: "تجهيز عرايس", price: 700 },
+        { name: "تعليم", price: 300 },
+        { name: "صحي", price: 600 },
+        { name: "غسيل كلوي", price: 1000 },
+        { name: "حضانات", price: 5000 },
+        { name: "مشاريع", price: 10000 },
+        { name: "اسقف", price: 15000 },
+        { name: "الحفه", price: 200 },
+        { name: "بطاطين", price: 100 },
+        { name: "كسوه", price: 250 }
       ];
 
       // Generate execution details
@@ -44,10 +59,9 @@ async function fetchData() {
           return `
            <div class="execution">
             <div class="execution-header">
-              <h4>اجمالي ${intention.name} (${executionValue}) عدد التنفيذ = ${executionCount}</h4>
+              <h4>اجمالي نية ${ intention.name } ( ${ executionValue } ) عدد التنفيذ = ${executionCount}</h4>
             </div>
             <p><strong>السعر:</strong> ${intention.price} جنيه</p>
-
            </div>
           `;
         }
