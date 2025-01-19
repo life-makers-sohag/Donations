@@ -28,27 +28,27 @@ async function fetchData() {
 
       // Intentions and prices
       const intentions = [
-        { name: "غزه عام", price: 250 },
-        { name: "كرتونه غذائيه غزه", price: 300 },
-        { name: "السلة الغذائية", price: 150 },
-        { name: "كرتونه غذائيه", price: 350 },
-        { name: "اطعام", price: 200 },
-        { name: "زكاه فطر", price: 150 },
-        { name: "وصلات مياه", price: 18000 },
-        { name: "نخيل", price: 50 },
+        { name: "غزه عام", price: 100 },
+        { name: "كرتونه غذائيه غزه", price: 700 },
+        { name: "السلة الغذائية", price: 500 },
+        { name: "كرتونه غذائيه", price: 700 },
+        { name: "اطعام", price: 100 },
+        { name: "زكاه فطر", price: 100 },
+        { name: "وصلات مياه", price: 8000 },
+        { name: "نخيل", price: 4000 },
         { name: "كفاله ايتام", price: 300 },
-        { name: "اعانه ماليه", price: 500 },
-        { name: "سداد ديون", price: 1000 },
-        { name: "تجهيز عرايس", price: 700 },
-        { name: "تعليم", price: 300 },
-        { name: "صحي", price: 600 },
-        { name: "غسيل كلوي", price: 1000 },
-        { name: "حضانات", price: 5000 },
+        { name: "اعانه ماليه", price: 1000 },
+        { name: "سداد ديون", price: 2000 },
+        { name: "تجهيز عرايس", price: 10000 },
+        { name: "تعليم", price: 500 },
+        { name: "صحي", price: 500 },
+        { name: "غسيل كلوي", price: 4000 },
+        { name: "حضانات", price: 3000 },
         { name: "مشاريع", price: 10000 },
-        { name: "اسقف", price: 15000 },
-        { name: "الحفه", price: 200 },
-        { name: "بطاطين", price: 100 },
-        { name: "كسوه", price: 250 }
+        { name: "اسقف", price: 17000 },
+        { name: "الحفه", price: 500 },
+        { name: "بطاطين", price: 7000 },
+        { name: "كسوه", price: 500 }
       ];
 
       // Generate execution details
@@ -59,7 +59,8 @@ async function fetchData() {
           return `
            <div class="execution">
             <div class="execution-header">
-              <h4>اجمالي نية ${ intention.name } ( ${ executionValue } ) عدد التنفيذ = ${executionCount}</h4>
+              <h4>اجمالي نية ${ intention.name } = ${ executionValue }</h4>
+              <h3>عدد التنفيذ = ${executionCount}</h3>
             </div>
             <p><strong>السعر:</strong> ${intention.price} جنيه</p>
            </div>
